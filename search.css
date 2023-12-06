@@ -1,0 +1,134 @@
+.search-box {
+    position: relative;
+    height: 40px;
+    width: 340px;
+    right: 30px;
+}
+/* .search-box:hover input{
+    width: 320px;
+} */
+input {
+    border: none;
+    background: #ffffff;
+    border-width: 1.5px;
+    border-color: #000000;
+    border-style: solid;
+    color: #000000;
+    height: 10px;
+    border-radius: 50px;
+    outline: none;
+    font-size: 15px;
+    width: 0;
+    opacity: 0;
+    transition: width 0.4s, opacity 0.4s;
+}
+
+button.expand,
+button.close {
+    position: absolute;
+    width: 25px;
+    height: 35px;
+    background: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    transition: 0.4s;
+   align-items: center;
+}
+
+button.close {
+    background: none;
+    font-size: 22px;
+    color: rgb(0, 0, 0);
+}
+
+/*  ----  Search box opened  ----  */
+
+.search-box.opened input {
+    width: 200px;
+    height: 30px;
+    opacity: 1;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.search-box.opened .expand {
+    width: 30px;
+    height: 35px;
+}
+
+.search-box.opened .close {
+    /* right: -20px; */
+    left: -35px;
+    transition: right 0.4s;
+    transition-delay: 0.3s;
+    /* animation: sizeAnimation 0.3s; */
+    animation-delay: 0.7s;
+}
+
+@keyframes sizeAnimation {
+    0% {
+        font-size: 1.8em;
+    }
+    50% {
+        font-size: 2.5em;
+    }
+    100% {
+        font-size: 1.8em;
+    }
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    max-width: 1200px;
+    width: 100%;
+    /* margin: 0 auto; */
+    bottom: 20px;
+    padding: 40px 20px;
+}
+.container .images .image-box {
+    position: relative;
+    height: 180px;
+    width: 180px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+/* .image{
+    margin-bottom: 20px;
+} */
+.images {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.images .image-box {
+    margin: 8px;
+}
+
+.images .image-box img {
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    transition: transform 0.2s linear;
+}
+.image-box:hover img {
+    transform: scale(1.2);
+}
+
+.image-box h6 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(0, 0, 0)a0a;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: capitalize;
+    background-color: rgb(19, 18, 35,0);
+}
